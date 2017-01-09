@@ -1,4 +1,4 @@
-Script helps you to print a stack of cribs. Read more bellow in Russian.
+Script helps you to print a stack of cribs. Read more below in Russian.
 
 ---
 Предполагается, что у Вас есть учебник из n страниц и Вы хотите распечатать его по m^2 страниц на сторону A4 (т.е. по m страниц в ряд и m таких рядов на сторону A4).
@@ -7,5 +7,8 @@ Script helps you to print a stack of cribs. Read more bellow in Russian.
  - число страниц в учебнике.
 Вы получаете список номеров страниц, который нужно вставить в поле "Page numbers" окна печати. Также в окне печати вы выбираете печать по m на m страниц документа на страницу A4.
 Напечатав документ, Вам остается разрезать A4 на стопки и сложить их друг поверх друга, начиная с правой нижней. Двигаться надо налево (до упора), а затем вверх.
+См. фото result.jpg
+
 ???????
+
 PROFIT!
