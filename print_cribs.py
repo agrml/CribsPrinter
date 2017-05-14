@@ -7,14 +7,23 @@ Script helps you to print a stack of cribs. Read more in readme.
 import math
 import copy
 
-n = int(input("Pages per row: "))
+n = 3
+try:
+    n = int(input("Pages per row [<Enter> for 3]: "))
+except ValueError:
+    pass
+firstPageIdx = 0
+try:
+    firstPageIdx = int(input("First page [<Enter> for 1]: ")) - 1
+except ValueError:
+    pass
 numPages = int(input("Pages in the document: "))
 
 numStacks = n ** 2
-numPagesPerStack = math.ceil(numPages / numStacks)
+numPagesPerStack = math.ceil((numPages - firstPageIdx) / numStacks)
 
 stacks = []
-pageNumber = 0
+pageNumber = firstPageIdx
 # form stacks
 for stackNumber in range(numStacks):
     stack = []
@@ -22,7 +31,7 @@ for stackNumber in range(numStacks):
         # numPages marks "white pages" in the last stacks
         stack.append(pageNumber + 1 if pageNumber < numPages else numPages)
         pageNumber += 1
-        if not(pageNumber % numPagesPerStack):
+        if not((pageNumber - firstPageIdx) % numPagesPerStack):
             break
     stacks.append(copy.copy(stack))
 
